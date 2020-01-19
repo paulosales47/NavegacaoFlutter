@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:navegacao/TelaPrincipalATM.dart';
 import 'package:navegacao/TelaSecundaria.dart';
 
 void main(){
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: TelaPrincipal(),
+    home: TelaPrincipalATM(),
   ));
 }
 

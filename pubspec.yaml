@@ -70,3 +70,16 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - images/cliente1.png
+    - images/cliente2.png
+    - images/detalhe_cliente.png
+    - images/detalhe_contato.png
+    - images/detalhe_empresa.png
+    - images/detalhe_servico.png
+    - images/logo.png
+    - images/menu_cliente.png
+    - images/menu_contato.png
+    - images/menu_empresa.png
+    - images/menu_servico.png
+
