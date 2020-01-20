@@ -7,6 +7,10 @@ void main(){
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: TelaPrincipal(),
+    initialRoute: "/",
+    routes: {
+      "/secundaria": (context) => TelaSecundaria()
+    },
   ));
 }
 
@@ -30,10 +34,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           children: <Widget>[
             RaisedButton(
               onPressed: (){
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) =>
-                        TelaSecundaria("Paulo Henrique") ));
+                Navigator.pushNamed(context, "/secundaria");
               },
               color: Colors.blue,
               textColor: Colors.white,

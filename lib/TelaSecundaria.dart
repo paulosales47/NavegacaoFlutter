@@ -4,7 +4,7 @@ class TelaSecundaria extends StatefulWidget {
   @override
   _TelaSecundariaState createState() => _TelaSecundariaState();
 
-  String nome;
+  String nome = "";
 
   TelaSecundaria([this.nome]);
 
