@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 class TelaSecundaria extends StatefulWidget {
   @override
   _TelaSecundariaState createState() => _TelaSecundariaState();
+
+  String nome;
+
+  TelaSecundaria([this.nome]);
+
 }
 
 class _TelaSecundariaState extends State<TelaSecundaria> {
@@ -18,7 +23,7 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Text("Tela Secundária")
+            Text("${widget.nome}")
           ],
         ),
       ),

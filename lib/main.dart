@@ -6,7 +6,7 @@ import 'package:navegacao/TelaSecundaria.dart';
 void main(){
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: TelaPrincipalATM(),
+    home: TelaPrincipal(),
   ));
 }
 
@@ -32,7 +32,8 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               onPressed: (){
                 Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TelaSecundaria() ));
+                    MaterialPageRoute(builder: (context) =>
+                        TelaSecundaria("Paulo Henrique") ));
               },
               color: Colors.blue,
               textColor: Colors.white,
