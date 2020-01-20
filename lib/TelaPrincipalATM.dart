@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:navegacao/TelaCliente.dart';
+import 'package:navegacao/TelaContato.dart';
+import 'package:navegacao/TelaEmpresa.dart';
+import 'package:navegacao/TelaServico.dart';
 
-class TelaPrincipalATM extends StatelessWidget {
+class TelaPrincipalATM extends StatefulWidget {
+  @override
+  _TelaPrincipalATMState createState() => _TelaPrincipalATMState();
+}
+
+class _TelaPrincipalATMState extends State<TelaPrincipalATM> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,13 +34,11 @@ class TelaPrincipalATM extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   GestureDetector(
-                    onTap: (){
-
-                    },
+                    onTap: _abrirEmpresa,
                     child: Image.asset("images/menu_empresa.png"),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: _abrirServico,
                     child: Image.asset("images/menu_servico.png"),
                   )
                 ],
@@ -41,11 +48,11 @@ class TelaPrincipalATM extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 GestureDetector(
-                  onTap: (){},
+                  onTap: _abrirClientes,
                   child: Image.asset("images/menu_cliente.png"),
                 ),
                 GestureDetector(
-                  onTap: (){},
+                  onTap: _abrirContato,
                   child: Image.asset("images/menu_contato.png"),
                 )
               ],
@@ -56,10 +63,18 @@ class TelaPrincipalATM extends StatelessWidget {
     );
   }
 
-  void _abrirEmpresa(BuildContext context){}
-  void _abrirServico(BuildContext context){}
-  void _abrirClientes(BuildContext context){}
-  void _abrirContato(BuildContext context){}
-
+  void _abrirEmpresa(){
+    Navigator.push(context,MaterialPageRoute(builder: (context) => TelaEmpresa()));
+  }
+  void _abrirServico(){
+    Navigator.push(context,MaterialPageRoute(builder: (context) => TelaServico()));
+  }
+  void _abrirClientes(){
+    Navigator.push(context,MaterialPageRoute(builder: (context) => TelaCliente()));
+  }
+  void _abrirContato(){
+    Navigator.push(context,MaterialPageRoute(builder: (context) => TelaContato()));
+  }
 }
+
 
